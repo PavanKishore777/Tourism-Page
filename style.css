@@ -1,0 +1,339 @@
+@import url('https:fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Muli',sans-serif;
+}
+
+.btn{
+    color: white;
+    text-decoration: none;
+    background-color: teal;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    margin-top: 20px;
+}
+
+.btn:hover{
+    background-color: #0f5353;
+}
+/*
+landing page css properties 
+*/
+
+.landing-page{
+    background: white url(./images/Slider\ Seoul\ GFTS\ 2021_2.jpg) no-repeat scroll center;
+    background-size: cover;
+    height: 100vh;
+    color:teal
+}
+
+.landing-page .wrapper{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+
+.landing-page .flex-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+.landing-page .vacation{
+    font-size: 90px;
+}
+
+/*
+Header section
+*/
+
+.vacation-header{
+    background: radial-gradient(#0f5353,teal);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.vacation-header .heading{
+    font-size: 90px;
+}
+
+/**
+Main Nav -  Bar
+*/
+
+.main-nav{
+    background-color: lightgrey;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    position: sticky;
+    top: 0;
+
+}
+.main-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+.main-nav a:hover{
+    background-color:#0f5353 ;
+    color: white;
+    border-radius: 30px;
+}
+
+/*
+Holiday-Section
+*/
+
+.holiday-section{
+    padding: 100px 40px;
+    text-align: center;
+}
+.holiday-heading{
+    font-size: 90px;
+    color: gray;
+}
+.holiday-text{
+    font-size: 25px;
+    color:#bfbebe;
+}
+/*
+PLACES TO VISIT SECRION 
+*/
+.places-to-visit-section{
+    text-align: center;
+}
+.places-to-visit-section,.holiday-heading{
+    padding-top: 50px;;
+}
+.places-to-visit-section .places-div{
+    margin-top: 20px;
+}
+.places-to-visit-section .places-div  img{
+    width: 30vw;
+    height: 30vh;
+    border: 0;
+    border-radius: 10px;
+   /* margin: 16px 21px;*/
+    margin: 7px 10px;
+
+}
+
+/**
+Gallery-section
+*/
+
+
+.gallery-section {
+    text-align: center;
+    margin-top: 100px;
+}
+.gallery-section,.holiday-heading{
+    padding-top: 50px;;
+}
+.gallery-section .gallery-div{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.gallery-section .gallery-wrapper{
+  
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px grey;
+  display: inline-block;
+  margin: 20px;
+}
+.gallery-section .gallery-wrapper img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    
+}
+.gallery-section img:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+
+/**
+Pacakges section
+*/
+.packages-section{
+    text-align: center;
+    margin-top: 40px;
+}
+.packages-section,.holiday-heading{
+    padding-top: 50px;;
+}
+.packages-section .package-wrapper{
+    margin-top: 40px;
+    padding: 30px;
+}
+.package-wrapper .package-card{
+   box-shadow: 0 0 10px grey;
+   border-radius: 5px;
+    width: 300px;
+    padding: 15px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.package-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.package-card .card-heading{
+    font-size: 30px;
+}
+.package-card .card-text{
+    font-size: 18px;
+    color: gray;
+}
+.package-card .btn{
+    border-radius: 50px;
+    box-shadow:0 0 5px grey;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.package-card .days-duration{
+    font-size: 15px;
+    color: gray;
+}
+
+/*
+Footer section
+*/
+.footer-section{
+    background-color: black;
+    padding: 40px;
+    color: white;
+    text-align: center;
+
+}
+.footer-section a{
+    color: teal;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-section-mobile{
+    display:none;
+}
+
+
+
+/* media query for only nav bar */
+@media screen and (max-width: 900px) and (min-width: 350px) {
+    .main-nav{
+        position:sticky;
+        top:0;
+    }
+    .main-nav a {
+        font-size: 12px;
+        padding: 12px 13px;
+    }
+    .landing-page{
+    width: auto;
+    height: auto;
+    }
+    .landing-page{
+        background: white url(./images/Slider\ Seoul\ GFTS\ 2021_2.jpg) no-repeat scroll center;
+        background-size: cover;
+        height: 100vh;
+        color:teal
+    }
+    .landing-page .vacation{
+        font-size: 58px;
+    }
+    .vacation-header .heading {
+        font-size: 23px;
+    }
+    .packages-section .package-wrapper {
+        margin-top: 40px;
+        padding: 11px;
+    }
+    .gallery-section .gallery-div {
+        margin-top: 5px;
+        padding-left: 0px;
+    }
+    .gallery-section .gallery-wrapper {
+        width: 350px;
+        /*height: 300px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 10px grey;
+        display: inline-block;
+        margin: 20px;*/
+    }
+    .holiday-heading{
+        font-size: 29px;
+        color: gray;
+    }
+    .holiday-text{
+        font-size: 12px;
+    }
+    .holiday-section {
+        padding: 32px 10px;
+        text-align: center;
+    }
+    .footer-section{
+        display: none;
+    }
+    .packages-section, .holiday-heading {
+         padding-top: 99px;
+    }
+
+
+    .footer-section-mobile{
+        display: block;
+        background-color: black;
+        padding: 40px;
+        color: white;
+        text-align: center;
+    
+    }
+    .footer-section-mobile a{
+        color: teal;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .packages-section, .holiday-heading {
+        padding-top: 35px;
+    }
+    #Enjoy-holiday{
+        padding-top:0;
+    }
+    .package-card .card-heading {
+        font-size: 20px;
+    }
+    .package-card .card-text {
+        font-size: 12px;
+        color: gray;
+    }
+    .places-to-visit-section .places-div img {
+        width: 26vw;
+        height: 13vh;
+        border: 0;
+        border-radius: 10px;
+        /* margin: 16px 21px; */
+        margin: 7px 10px;
+    }
+}
