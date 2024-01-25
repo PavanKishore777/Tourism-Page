@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation Booking</title>
+    <link rel="icon" href="./images/favi.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <!--  LANDING PAGE-->
@@ -31,8 +33,38 @@
         <a href="#places-to-visit-section">Places</a>
         <a href="#Gallery-section">Gallery</a>
         <a href="#Our-pacakges-section">Packages</a>
-        <a href="#landing-page">Contact</a>
+        <a href="#" data-toggle="modal" data-target="#exampleModal">Contact</a>
     </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enquiry-Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-2">
+                      <input required="true" type="text" id="nameInput" placeholder="Your Name" class="form-control"/>
+                  </div>
+                    <div class="mb-2">
+                        <input required type="email" id="emailInput" placeholder="Your Email" class="form-control"/>
+                    </div>
+                    <div class="mb-2">
+                        <input required type="text" id="mobileInput" placeholder="Mobile.No" class="form-control" oninput="validateNumber(this)"/>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn" onclick="submitForm()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!--   HOLIDAY-SECTION-->
     <section class="holiday-section" id="holiday-section">
@@ -208,6 +240,9 @@
             <small>Developed & Maintained By
                 <a href="https://github.com" target="_blank"> <br> PAVAN KISHORE KONDROTHU</a> </small>
         </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
